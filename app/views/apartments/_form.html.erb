@@ -1,0 +1,31 @@
+<%= form_with(model: apartment) do |form| %>
+  <% if apartment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(apartment.errors.count, "error") %> prohibited this apartment from being saved:</h2>
+
+      <ul>
+        <% apartment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :numero %>
+    <%= form.text_field :numero %>
+  </div>
+
+  <div class="field">
+    <%= form.label :building_id, clas: 'form-label' %>
+    <% if apartment.building %>
+      <%= form.select(:building_id, options_from_collection_for_select(buildings, :id, :nombre, apartment.building_id), { include_blank: "Elige un edificio" }, { class: "form-select" }) %>
+    <% else %>
+      <%= form.select(:building_id, options_from_collection_for_select(buildings, :id, :nombre), { include_blank: "Elige un edificio" }, { class: "form-select" }) %>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

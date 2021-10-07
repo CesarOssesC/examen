@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @building.nombre %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @building.direccion %>
+</p>
+
+<p>
+  <strong>Ciudad:</strong>
+  <%= @building.ciudad %>
+</p>
+
+<% @building.apartment.each do |apt| %>
+  <div class="row">
+    <div class="col" style="color: black">
+      <%= apt.numero %>
+    </div>
+  </div>
+<% end %>
+
+<%= link_to 'Edit', edit_building_path(@building) %> |
+<%= link_to 'Back', buildings_path %>
