@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="my-5 card text-center tarjeta-presentacion ">
+        <div class="card-header">
+            Bienvenidos!
+        </div>
+        <div class="card-body">
+            <p class="card-text">Esta es la presentación de mi exámen de Empredimiento Digital con Tecnologías Web</p>
+            <p class="card-text">Mi nombre es:</p>
+            <h5 class="card-title">César Osses</h5>
+            <p class="">Esta App te permite administrar, crear, editar y eliminar edificios y sus respectivos de departamentos.<br>
+                        Puedes elegir la vista de edificios o departamentos en una de las tarjegas de abajo.<br>
+                        También puedes visitar mi GitHub para ver todo lo que hicimos durante el curso </p>
+            <a href="https://github.com/CesarOssesC" class="btn btn-primary"><i class="bi bi-github"> GitHub</i></a>
+        </div>
+        <div class="card-footer">
+            2 days ago
+        </div>
+    </div>
+    <div class="row justify-content-between my-5">
+        <div class="col-lg-6 col-sm-12">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Edificios</h5>
+                    <p class="card-text">Listado de Edificios</p>
+                    <%= link_to buildings_path, class: "btn btn-primary" do %>
+                        <i class="bi bi-card-list"></i>
+                        Edificios
+                    <% end %>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Departamentos</h5>
+                    <p class="card-text">Listado Departamentos</p>
+                    <%= link_to apartments_path, class: "btn btn-primary" do %>
+                        <i class="bi bi-card-list"></i>
+                        Departamentos
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
