@@ -1,6 +1,6 @@
 <div class="container">
   
-    <div class="col-lg-3 col-md-3 col-sm-12 card my-3 text-center card-show" >
+    <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 card my-3 text-center card-show" >
       <div class="card-body">
         <p id="notice"><%= notice %></p>
         <h5 class="card-title fw-bold">Edificio: <%= @building.nombre %></h5>
@@ -10,12 +10,12 @@
       </div>
     </div>
 
-    <div class="col-lg-6 col-md-6 col-sm-12 tabla-principal table-wrapper-scroll-y my-custom-scrollbar tabla-show my-3 ">
+    <div class="col-lg-5 col-md-5 col-sm-12 tabla-principal table-wrapper-scroll-y my-custom-scrollbar tabla-show my-3 ">
       <table class="table table-bordered">
         <thead class="sticky-top head-lista">
           <tr>
             <th class="text-center">Departamentos</th>
-            <th class="text-center" colspan="2">Acciones</th>
+            <th class="text-center" colspan="3">Acciones</th>
           </tr>
         </thead>
 
@@ -25,7 +25,7 @@
               <td class="text-center"><%= apt.numero %></td>
               <td class="col-1 text-center"><%= link_to apartment_path(apt.id), class: "btn btn-primary m-0", style: "font-size: 11px" do  %>Ver<% end %></td>
               <td class="col-1 text-center"><%= link_to edit_apartment_path(apt.id), class: "btn btn-warning m-0", style: "font-size: 11px; color: #fff" do %>Editar<% end %></td>
-              
+              <td class="col-1 text-center"><%= link_to apartment_path(apt.id), method: :delete, data: { confirm: 'Realmente quieres eliminar este departamento?' }, class: "btn btn-danger m-0", style: "font-size: 11px" do  %>Eliminar<% end %></td>
             </tr>
           <% end %>
         </tbody>
