@@ -20,6 +20,11 @@ body {
     background-blend-mode: screen;
 }
 
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+
 .table {
     color: cornsilk;
 }
@@ -75,6 +80,24 @@ body {
     vertical-align: top;
     margin-left: 20%;
     
+}
+
+.input-group{
+    width: 50vw;
+}
+
+.input-group-text {
+    background-color: #0d6efd;
+    color: cornsilk;
+}
+
+/* .id-edificio-form {
+    background-color: gray;
+    color: red;
+} */
+
+#disabledTextInput {
+    background-color: rgb(184, 184, 189);
 }
 
 @media screen and (max-width: 768px){

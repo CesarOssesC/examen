@@ -26,7 +26,7 @@
             <td class="text-center"><%= apartment.building.nombre %></td>
             <td class="col-1 text-center"><%= link_to apartment, class: "btn btn-primary m-0", style: "font-size: 11px" do  %>Ver<% end %></td>
             <td class="col-1 text-center"><%= link_to edit_apartment_path(apartment), class: "btn btn-warning m-0", style: "font-size: 11px; color: #fff" do  %>Editar<% end %></td>
-            <td class="col-1 text-center"><%= link_to apartment, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger m-0", style: "font-size: 11px" do  %>Eliminar<% end %></td>
+            <td class="col-1 text-center"><%= link_to apartment, method: :delete, data: { confirm: 'Realmente quieres eliminar este departamento?' }, class: "btn btn-danger m-0", style: "font-size: 11px" do  %>Eliminar<% end %></td>
           </tr>
         <% end %>
       </tbody>

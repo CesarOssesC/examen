@@ -1,8 +1,8 @@
 <div class="container">
-    <h1>Editing Building</h1>
+    <h1 class="mb-5">Editar Edificios</h1>
 
     <%= render 'form', building: @building, apartment: @apartment %>
 
-    <%= link_to 'Show', @building %> |
-    <%= link_to 'Back', buildings_path %>
+    <%= link_to 'Ver', @building, class:"btn btn-primary" %> 
+    <%= link_to 'Volver', buildings_path, class:"btn btn-primary" %>
 </div>

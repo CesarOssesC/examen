@@ -27,7 +27,7 @@
             <td class="text-center col-1"><%= link_to building, class: "btn btn-primary m-0", style: "font-size: 11px" do%>Ver<% end %></td>
               
             <td class="text-center col-1"><%= link_to edit_building_path(building), class: "btn btn-warning m-0", style: "font-size: 11px; color: #fff" do%>Editar<% end %></td>
-            <td class="text-center col-1"><%= link_to building, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger m-0", style: "font-size: 11px" do%>Eliminar<% end %></td>
+            <td class="text-center col-1"><%= link_to building, method: :delete, data: { confirm: 'Realmente quieres eliminar este edificio?' }, class: "btn btn-danger m-0", style: "font-size: 11px" do%>Eliminar<% end %></td>
           </tr>
         <% end %>
       </tbody>

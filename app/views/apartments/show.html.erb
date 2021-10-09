@@ -1,16 +1,22 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
 
-  <p>
-    <strong>Numero:</strong>
-    <%= @apartment.numero %>
-  </p>
+  <div class="col-5 my-5 card text-center">
+    <div class="card-body">
+      <h4 class="card-title">Departamento</h4>
+      <h5 class="card-title">
+      <p><strong>Número:</strong> <%= @apartment.numero %></p>
+      </h5>
+      <p class="card-text">
+      <p><strong>Pertenece a Edificio:</strong> <%= @apartment.building.nombre %></p>
+      </p>
+      <p class="card-text">
+      <p><strong>Id Edificio:</strong> <%= @apartment.building_id %></p>
+      </p>
+    </div>
+  </div>
 
-  <p>
-    <strong>Building:</strong>
-    <%= @apartment.building_id %>
-  </p>
-
-  <%= link_to 'Edit', edit_apartment_path(@apartment) %> |
-  <%= link_to 'Back', apartments_path %>
+  <%= link_to 'Editar', edit_apartment_path(@apartment), class:"btn btn-primary" %>
+  <%= link_to 'Volver', apartments_path, class:"btn btn-primary" %>
 </div>
+

@@ -11,21 +11,30 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :numero %>
-    <%= form.text_field :numero %>
+  <div class="input-group mb-3">
+    <%= form.label :numero, class:"input-group-text " %>
+    <%= form.text_field :numero, class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :building_id, "Edificio", class: 'form-label' %>
+  <% if apartment.building %>
+    <div class="input-group mb-3">
+      <%= form.label :building_id, "Id Edificio", class:"input-group-text " %>
+      <%= form.text_field :building_id, id:"disabledTextInput", class:"form-control id-edificio-form", disabled: true %>
+    </div>
+  <% else %>
+    <div type="hidden"></div>
+  <% end %>
+
+  <div class="input-group mb-3">
+    <%= form.label :building_id, "Edificio", class: 'input-group-text' %>
     <% if apartment.building %>
-      <%= form.select(:building_id, options_from_collection_for_select(buildings, :id, :nombre, apartment.building_id), { include_blank: "Elige un edificio" }, { class: "form-select" }) %>
+      <%= form.select(:building_id, options_from_collection_for_select(buildings, :id, :nombre, apartment.building_id), {  }, { class: "form-select" }) %>
     <% else %>
       <%= form.select(:building_id, options_from_collection_for_select(buildings, :id, :nombre), { include_blank: "Elige un edificio" }, { class: "form-select" }) %>
     <% end %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit nil, class:"btn btn-primary mb-5" %>
   </div>
 <% end %>
