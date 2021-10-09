@@ -30,6 +30,7 @@ class ApartmentsController < ApplicationController
         format.html { redirect_to @apartment, notice: "Apartment was successfully created." }
         format.json { render :show, status: :created, location: @apartment }
       else
+        consultar_building
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @apartment.errors, status: :unprocessable_entity }
       end
@@ -43,6 +44,7 @@ class ApartmentsController < ApplicationController
         format.html { redirect_to @apartment, notice: "Apartment was successfully updated." }
         format.json { render :show, status: :ok, location: @apartment }
       else
+        consultar_building
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @apartment.errors, status: :unprocessable_entity }
       end

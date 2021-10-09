@@ -1,6 +1,10 @@
 ---
 es:
   activerecord:
+    models:
+      building: Edificio
+      apartment: Departamento
+      
     errors:
       messages:
         record_invalid: 'La validación falló: %{errors}'

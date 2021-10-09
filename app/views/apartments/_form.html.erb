@@ -17,7 +17,7 @@
   </div>
 
   <div class="field">
-    <%= form.label :building_id, clas: 'form-label' %>
+    <%= form.label :building_id, "Edificio", class: 'form-label' %>
     <% if apartment.building %>
       <%= form.select(:building_id, options_from_collection_for_select(buildings, :id, :nombre, apartment.building_id), { include_blank: "Elige un edificio" }, { class: "form-select" }) %>
     <% else %>
