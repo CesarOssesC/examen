@@ -11,6 +11,7 @@
     <table class="table table-bordered">
       <thead class="sticky-top head-lista">
         <tr>
+          <th class="text-center col-1">Id Edificio</th>
           <th class="text-center">Nombre</th>
           <th class="text-center">Direccion</th>
           <th class="text-center">Ciudad</th>
@@ -21,6 +22,7 @@
       <tbody>
         <% @buildings.each do |building| %>
           <tr>
+            <td class="text-center col-1"><%= building.id %></td>
             <td class="text-center"><%= building.nombre %></td>
             <td class="text-center"><%= building.direccion %></td>
             <td class="text-center"><%= building.ciudad %></td>

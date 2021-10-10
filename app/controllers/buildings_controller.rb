@@ -3,7 +3,7 @@ class BuildingsController < ApplicationController
   
   # GET /buildings or /buildings.json
   def index
-    @buildings = Building.all.order(nombre: :asc)
+    @buildings = Building.all.order(id: :asc)
   end
 
   # GET /buildings/1 or /buildings/1.json
