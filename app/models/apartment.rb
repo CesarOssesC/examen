@@ -3,7 +3,7 @@ class Apartment < ApplicationRecord
   
   validate :depto_unico
   validates :numero, presence: true
-
+  validates :building_id, presence: true
 
   private
 

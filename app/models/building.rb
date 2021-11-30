@@ -1,6 +1,6 @@
 class Building < ApplicationRecord
 
-    has_many :apartment
+    has_many :apartment, dependent: :delete_all 
 
     validates :nombre, presence: true
     validates :direccion, presence: true
